@@ -4,10 +4,10 @@ case class ParkingSlot(
                         id: Long,
                         lat: Double,
                         lon: Double,
-                        freeFrom: java.sql.Timestamp,
+                        freeFrom: String,
                         userId: Long
                         ) extends BaseEntity
 
-object ParkingSlot extends ((Long, Double, Double, java.sql.Timestamp, Long) => ParkingSlot) {
+object ParkingSlot extends ((Long, Double, Double, String, Long) => ParkingSlot) {
   ParkingSlot.tupled
 }

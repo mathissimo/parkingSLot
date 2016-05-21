@@ -30,7 +30,7 @@ object SlickTables extends HasDatabaseConfig[JdbcProfile] {
 
     def lon = column[Double]("lon")
 
-    def freeFrom = column[java.sql.Timestamp]("free_from")
+    def freeFrom = column[String]("free_from")
 
     def userId = column[Double]("user_id")
 
