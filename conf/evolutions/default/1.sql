@@ -11,6 +11,7 @@ create table "parking_slots" (
   "id" BIGSERIAL NOT NULL PRIMARY KEY,
   "lat" DOUBLE NOT NULL,
   "lon" DOUBLE NOT NULL,
+  "user_id" INT REFERENCES "users"("id"),
   "free_from" TIMESTAMP
 );
 
