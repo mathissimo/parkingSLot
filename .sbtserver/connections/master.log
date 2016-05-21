@@ -1,0 +1,16 @@
+New log file opened at Sat May 21 10:34:58 CEST 2016 by 3636@mmuenscher-mbp.local
+Taking next connection to: 54087
+New client attempting to connect on port: 54088-54087
+  Address = /10.183.177.52:54087
+This client on port 54088 has uuid fc41d7a5-bf8c-4b0c-a1cf-8b4d2c6220b2 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-fc41d7a5-bf8c-4b0c-a1cf-8b4d2c6220b2
+Taking next connection to: 54087
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 54087
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 3636@mmuenscher-mbp.local logs at Sat May 21 10:41:00 CEST 2016, goodbye.
