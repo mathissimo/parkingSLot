@@ -1,6 +1,6 @@
 package models.persistence
 
-import models.entities.Supplier
+import models.entities.{ParkingSlot, User}
 import play.api.Play
 import play.api.db.slick.{DatabaseConfigProvider, HasDatabaseConfig}
 import slick.driver.JdbcProfile
@@ -17,14 +17,27 @@ object SlickTables extends HasDatabaseConfig[JdbcProfile] {
     def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
   }
 
-  case class SimpleSupplier(name: String, desc: String)
+  //  case class SimpleSupplier(name: String, desc: String)
 
-  class SuppliersTable(tag: Tag) extends BaseTable[Supplier](tag, "suppliers") {
-    def name = column[String]("name")
-    def desc = column[String]("desc")
-    def * = (id, name, desc) <> (Supplier.tupled, Supplier.unapply)
+  class UsersTable(tag: Tag) extends BaseTable[User](tag, "users") {
+    def login = column[String]("login")
+
+    def * = (id, login) <>(User.tupled, User.unapply)
   }
 
-  val suppliersTableQ : TableQuery[SuppliersTable] = TableQuery[SuppliersTable]
+  class ParkingSlotTable(tag: Tag) extends BaseTable[ParkingSlot](tag, "parking_slot") {
+    def lat = column[Double]("lat")
+
+    def lon = column[Double]("lon")
+
+    def freeFrom = column[java.sql.Timestamp]("free_from")
+
+    def userId = column[Double]("user_id")
+
+    def * = (id, lat, lon, freeFrom, userId) <>(ParkingSlot.tupled, ParkingSlot.unapply)
+  }
+
+  val usersTableQ: TableQuery[UsersTable] = TableQuery[UsersTable]
+  val parkingSlotTableQ: TableQuery[ParkingSlotTable] = TableQuery[ParkingSlotTable]
 
 }
