@@ -34,7 +34,7 @@ object SlickTables extends HasDatabaseConfig[JdbcProfile] {
 
     def userId = column[Double]("user_id")
 
-    def * = (id, lat, lon, freeFrom, userId) <>(ParkingSlot.tupled, ParkingSlot.unapply)
+    def * = (id, lat, lon, freeFrom, userId) <> (ParkingSlot.tupled, ParkingSlot.unapply _)
   }
 
   val usersTableQ: TableQuery[UsersTable] = TableQuery[UsersTable]
