@@ -32,7 +32,7 @@ object SlickTables extends HasDatabaseConfig[JdbcProfile] {
 
     def freeFrom = column[String]("free_from")
 
-    def userId = column[Double]("user_id")
+    def userId = column[Long]("user_id")
 
     def * = (id, lat, lon, freeFrom, userId) <> (ParkingSlot.tupled, ParkingSlot.unapply _)
   }
