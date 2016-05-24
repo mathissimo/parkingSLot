@@ -31,7 +31,7 @@ class Module extends AbstractModule {
 
   @Provides
   def provideParkingSlotDAO: AbstractBaseDAO[ParkingSlotTable, ParkingSlot] = new BaseDAO[ParkingSlotTable, ParkingSlot] {
-    override protected val tableQ: dbConfig.driver.api.TableQuery[ParkingSlot] = SlickTables.parkingSlotTableQ
+    override protected val tableQ: dbConfig.driver.api.TableQuery[ParkingSlotTable] = SlickTables.parkingSlotTableQ
   }
 
 }

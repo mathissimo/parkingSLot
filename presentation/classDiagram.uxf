@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>170</x>
+      <y>60</y>
+      <w>340</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>ParkingSLot
+Retrieving Parking Slots or/on Parking Lots
+Matthias ...
+Christoph Knabe
+2016-05-21
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>60</x>
+      <y>240</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>User
+--
+login: String
+--
+publishParkingSlot()
+searchParkingSlot()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>470</x>
+      <y>220</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>ParkingSlot
+--
+-id: Long
+--
+lat: Double
+lon: Double
+freeFrom: Timestamp</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>190</x>
+      <y>260</y>
+      <w>300</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..1
+m2=0..1
+r1=publisher</panel_attributes>
+    <additional_attributes>30;30;280;30</additional_attributes>
+  </element>
+</diagram>
